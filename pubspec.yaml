@@ -77,8 +77,8 @@ flutter:
   fonts:
     - family: Gilroy
       fonts:       
-        - asset: fonts/Gilroy-light.otf
-        - asset: fonts/TrajanPro_Bold.otf
+        - asset: font/Gilroy-light.otf
+        - asset: font/Gilroy-ExtraBold.otf
           
     # - family: Gilroy
     #   fonts:
