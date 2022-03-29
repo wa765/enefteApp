@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dicoding/pages/SplashScreen_3.dart';
 import 'package:flutter_dicoding/text_style.dart';
 import 'package:swipeable_page_route/swipeable_page_route.dart';
 
@@ -93,7 +94,7 @@ class SplashScreen2 extends StatelessWidget {
                               ),
                             ),
                             onPressed: () {
-                               Navigator.push(
+                              Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
