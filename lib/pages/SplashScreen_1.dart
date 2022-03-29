@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dicoding/pages/SplashScreen_2.dart';
 import 'package:flutter_dicoding/text_style.dart';
+import 'package:swipeable_page_route/swipeable_page_route.dart';
 
 class SplashScreen1 extends StatelessWidget {
   const SplashScreen1({Key? key}) : super(key: key);
@@ -11,7 +13,6 @@ class SplashScreen1 extends StatelessWidget {
         backgroundColor: const Color(0xff1C212B),
         body: Center(
           child: Container(
-            margin: const EdgeInsets.only(bottom: 40),
             child: Column(
               children: [
                 Image.asset(
@@ -25,6 +26,9 @@ class SplashScreen1 extends StatelessWidget {
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height,
                     decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          topRight: Radius.circular(20)),
                       color: Color(0xff253341),
                     ),
                     child: Column(
@@ -61,8 +65,9 @@ class SplashScreen1 extends StatelessWidget {
                               width: 10,
                               height: 10,
                               decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Color(0xFF1C212B)),
+                                shape: BoxShape.circle,
+                                color: Color(0xFF1C212B),
+                              ),
                             ),
                             const SizedBox(
                               width: 10,
@@ -87,7 +92,13 @@ class SplashScreen1 extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(10),
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const SplashScreen2()));
+                            },
                             child: Text(
                               "Next",
                               style: mainSubtitle.copyWith(
@@ -98,7 +109,7 @@ class SplashScreen1 extends StatelessWidget {
                         ),
                         const SizedBox(
                           height: 40,
-                        ),
+                        )
                       ],
                     ),
                   ),
