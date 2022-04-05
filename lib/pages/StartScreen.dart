@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dicoding/pages/WelcomePage.dart';
 import 'package:flutter_dicoding/text_style.dart';
 
 class StartScreen extends StatelessWidget {
@@ -72,7 +73,14 @@ class StartScreen extends StatelessWidget {
                   height: 50,
                   margin: const EdgeInsets.only(left: 24),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const WelcomePage(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
